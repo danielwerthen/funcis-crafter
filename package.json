@@ -17,7 +17,8 @@
     "node-jsx": "^0.12.0",
     "react": "^0.12.0",
     "serialize-javascript": "^1.0.0",
-    "serve-favicon": "^2.1.6"
+    "serve-favicon": "^2.1.6",
+    "vm-browserify": "0.0.4"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

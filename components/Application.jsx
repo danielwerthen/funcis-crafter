@@ -2,11 +2,13 @@
  * Copyright 2014, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
  */
+/*global document */
 'use strict';
 var React = require('react');
 var Nav = require('./Nav.jsx');
 var Home = require('./Home.jsx');
 var About = require('./About.jsx');
+var FunctionCrafter = require('./FunctionCrafter.jsx');
 var Page = require('./Page.jsx');
 var Timestamp = require('./Timestamp.jsx');
 var ApplicationStore = require('../stores/ApplicationStore');
@@ -35,6 +37,9 @@ var Application = React.createClass({
                 break;
             case 'about':
                 output = <About/>;
+                break;
+            case 'function':
+                output = <FunctionCrafter context={this.props.context}/>;
                 break;
             case 'page':
                 output = <Page context={this.props.context}/>;

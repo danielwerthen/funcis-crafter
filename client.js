@@ -15,16 +15,16 @@ debug.enable('*');
 
 bootstrapDebug('rehydrating app');
 app.rehydrate(dehydratedState, function (err, context) {
-    if (err) {
-        throw err;
-    }
-    window.context = context;
-    var mountNode = document.getElementById('app');
+  if (err) {
+    throw err;
+  }
+  window.context = context;
+  var mountNode = document.getElementById('app');
 
-    bootstrapDebug('React Rendering');
-    React.render(app.getAppComponent()({
-        context: context.getComponentContext()
-    }), mountNode, function () {
-        bootstrapDebug('React Rendered');
-    });
+  bootstrapDebug('React Rendering');
+  React.render(app.getAppComponent()({
+    context: context.getComponentContext()
+  }), mountNode, function () {
+    bootstrapDebug('React Rendered');
+  });
 });
