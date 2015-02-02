@@ -3,7 +3,8 @@ var React = require('react');
 var FunctionStore = require('../stores/FunctionStore');
 var StoreMixin = require('fluxible-app').StoreMixin;
 var FuncAction = require('../actions/updateFunction');
-var FuncEval = require('./FunctionEval');
+var FuncEval = require('./FunctionEval'),
+    ArgPick = require('./ArgumentPicker');
 
 var Crafter = React.createClass({
   mixins: [StoreMixin],
@@ -26,7 +27,7 @@ var Crafter = React.createClass({
   render: function () {
     return <div>
       <h2>Build a function</h2>
-      <p>{'function () {'}</p>
+      <ArgPick />
       <textarea value={this.state.body} onChange={this.handleChange}/>
       <p>{'}'}</p>
       <FuncEval context={this.props.context}/>
